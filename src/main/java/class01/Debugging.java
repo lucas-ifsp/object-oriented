@@ -27,7 +27,7 @@ void main() {
 
     for (int i = 0; i < students.size(); i++) {
         System.out.println(students.get(i) + " (" + grades.get(i) + ")");
-        sum = grades.get(i); // += to bug fix
+        sum += grades.get(i); // += to bug fix
     }
 
     double avg = sum / students.size();

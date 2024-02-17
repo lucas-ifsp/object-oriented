@@ -16,12 +16,14 @@ void main() {
     System.out.println(imperativeFilterComputerScientists(employees));
     System.out.println(declarativeFilterComputerScientists(employees));
 
+
+
     final String[] skillNames = {"Java", "Object-orientation", "functional programming"};
     Stream.of(skillNames)
-            .map(String::toUpperCase) //
-            .map(TechnicalSkill::new) // D
-            .sorted(Comparator.comparing(TechnicalSkill::getSkillName)) // A and C
-            .forEach(System.out::println); // B
+            .map(String::toUpperCase) // particular
+            .map(TechnicalSkill::new) //constructor
+            .sorted(Comparator.comparing(TechnicalSkill::getSkillName)) // particular
+            .forEach(System.out::println);
 }
 
 public List<Employee> imperativeFilterComputerScientists(List<Employee> employees){
