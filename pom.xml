@@ -10,7 +10,16 @@
     <packaging>pom</packaging>
     <modules>
         <module>basics</module>
+        <module>application</module>
     </modules>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.xerial</groupId>
+            <artifactId>sqlite-jdbc</artifactId>
+            <version>3.42.0.1</version>
+        </dependency>
+    </dependencies>
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
