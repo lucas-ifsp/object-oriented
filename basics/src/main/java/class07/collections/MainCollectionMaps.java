@@ -37,7 +37,7 @@ void main(){
     List<String> legendNames = new ArrayList<>(List.of("Ada", "Hopper", "von Neumann", "Turing"));
     Collections.sort(legendNames);
     final String output = String.join(", ", legendNames);
-    System.out.println(output); // it prints 'Ada, Turing, Hopper, von Neumann'
+    System.out.println(output); // it prints 'Ada, Hopper, Turing, von Neumann'
 
     List<Integer> legendBirthYear = new ArrayList<>(List.of(1815, 1906, 1903, 1912));
     Collections.sort(legendBirthYear);
