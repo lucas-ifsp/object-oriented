@@ -2,23 +2,26 @@ package class03.exercicio;
 
 public class Deck {
     private final Card[] deck = new Card[52];
-    private int position;
-
+    private int numberOfCards = 0;
 
     public Deck() {
-        for(Card.Rank rank : Card.Rank.values())
-            for(Card.Suit suit : Card.Suit.values()){
-                deck[position++] = new Card(suit, rank);
+
+        for(Rank rank : Rank.values()) {
+            for(Suit suit : Suit.values()) {
+                deck[numberOfCards++] = new Card(rank, suit, true);
             }
+        }
     }
 
     public Card takeOne(){
-        return deck[--position];
+        final Card card = deck[numberOfCards - 1];
+        deck[--numberOfCards] = null;
+        return card;
     }
 
-    public Card[] takeMany(int numberOfCards){
-        Card[] cards = new Card[numberOfCards];
-        for (int i = 0; i < numberOfCards; i++) {
+    public Card[] takeMany(int number){
+        Card[] cards = new Card[number];
+        for (int i = 0; i < cards.length; i++) {
             cards[i] = takeOne();
         }
         return cards;

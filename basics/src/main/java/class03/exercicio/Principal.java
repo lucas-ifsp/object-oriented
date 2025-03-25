@@ -1,10 +1,17 @@
 import class03.exercicio.Card;
 import class03.exercicio.Deck;
 
-void main(){
-    Deck deck = new Deck();
-    final Card[] cards = deck.takeMany(10);
-    for (Card card : cards) {
-        System.out.println(card.asString());
+public class Principal {
+    void main(){
+        final Deck deck = new Deck();
+        var oneCard = deck.takeOne();
+        System.out.println(oneCard.cardAsString());
+
+        var manyCards = deck.takeMany(3);
+        for (Card card : manyCards) {
+            card.faceUp();
+            System.out.println(card.cardAsString());
+        }
     }
 }
+

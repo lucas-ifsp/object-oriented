@@ -1,51 +1,43 @@
 package class03.exercicio;
 
 public class Card {
-    public enum Rank {ACE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN, JACK, QUEEN, KING}
-    public enum Suit {CLUBS, DIAMONDS, HEARTS, SPADES}
+    private final Rank rank;
+    private final Suit suit;
+    private boolean faceDown;
 
-    private Suit suit;
-    private Rank rank;
-    private boolean isClosed;
-
-    public Card(){
-        this.isClosed = true;
+    public Card(Rank rank, Suit suit) {
+        this(rank, suit, false);
     }
-    public Card(Suit suit, Rank rank) {
-        if(suit == null ^ rank == null){
-            throw new IllegalArgumentException("Foi bad.");
-        }
-        this.suit = suit;
+
+    public Card(Rank rank, Suit suit, boolean faceDown) {
         this.rank = rank;
+        this.suit = suit;
+        this.faceDown = faceDown;
     }
 
-    public void setSuit(Suit suit){
-        this.suit = suit;
+    public String cardAsString(){
+        return isFaceDown()? "XX" : (rank + " " + suit);
+    }
+
+
+    public Rank getRank() {
+        return rank;
     }
 
     public Suit getSuit() {
         return suit;
     }
 
-    public Rank getRank() {
-        return rank;
+    public boolean isFaceDown() {
+        return faceDown;
     }
 
-    public void setRank(Rank rank) {
-        this.rank = rank;
+    public void faceUp(){
+        faceDown = false;
     }
 
-    public boolean isClosed() {
-        return isClosed;
+    public void faceDown(){
+        faceDown = true;
     }
-
-    public void setClosed(boolean closed) {
-        isClosed = closed;
-    }
-
-    public String asString(){
-        return isClosed? "[X]" : "[" + suit + ", " + rank + "]";
-    }
-
 
 }
