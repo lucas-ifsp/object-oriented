@@ -32,7 +32,7 @@
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
     <data-source source="LOCAL" name="tusca" uuid="f93cafdf-113d-4fd0-9eb6-60b14b93f710">
-      <driver-ref>sqlite.xerial</driver-ref>
+      <driver-ref>3eff9beb-e67c-402e-b7de-a568dc8d5003</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
       <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/tusca.db</jdbc-url>

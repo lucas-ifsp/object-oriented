@@ -3,22 +3,24 @@ package class03.exercicio;
 public class Card {
     private final Rank rank;
     private final Suit suit;
-    private boolean faceDown;
+    private boolean faceUp;
 
     public Card(Rank rank, Suit suit) {
-        this(rank, suit, false);
-    }
-
-    public Card(Rank rank, Suit suit, boolean faceDown) {
         this.rank = rank;
         this.suit = suit;
-        this.faceDown = faceDown;
     }
 
-    public String cardAsString(){
-        return isFaceDown()? "XX" : (rank + " " + suit);
+    public void cover(){
+        faceUp = false;
     }
 
+    public void show(){
+        faceUp = true;
+    }
+
+    public boolean isFaceUp() {
+        return faceUp;
+    }
 
     public Rank getRank() {
         return rank;
@@ -27,17 +29,4 @@ public class Card {
     public Suit getSuit() {
         return suit;
     }
-
-    public boolean isFaceDown() {
-        return faceDown;
-    }
-
-    public void faceUp(){
-        faceDown = false;
-    }
-
-    public void faceDown(){
-        faceDown = true;
-    }
-
 }
