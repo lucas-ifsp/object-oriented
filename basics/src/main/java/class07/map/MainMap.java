@@ -17,7 +17,7 @@ void main(){
     employees.put("03", new Employee("03", "John von Neumann", "Polymath", 35_400.0, LocalDate.now().minusYears(7))); // put or replace
     employees.replace("04", new Employee("04", "Claude Elwood Shannon", "Information Scientist", 15_300.0, LocalDate.now())); // replace or ignore
 
-    for (String keys : employees.keySet()) System.out.println(STR."Key = \{keys}");
-    for (Employee value : employees.values()) System.out.println(STR."Value = \{value}");
-    for (Map.Entry<String, Employee> entry : employees.entrySet()) System.out.println(STR."Entry = \{entry}");
+    for (String keys : employees.keySet()) System.out.println("Key = " + keys);
+    for (Employee value : employees.values()) System.out.println("Value = " + value);
+    for (Map.Entry<String, Employee> entry : employees.entrySet()) System.out.println("Entry = " + entry);
 }

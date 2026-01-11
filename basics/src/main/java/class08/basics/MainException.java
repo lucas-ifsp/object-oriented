@@ -3,10 +3,10 @@ import java.util.Scanner;
 void main() {
     Scanner s = new Scanner(System.in);
 //    String input = s.nextLine();
-//    System.out.println(STR."The input number is \{isEven(input) ? "even!" : "odd!"}");
+//    System.out.println("The input number is " + (isEven(input) ? "even!" : "odd!"));
     try {
         String input = s.nextLine();
-        System.out.println(STR."The input number is \{isEven(input) ? "even!" : "odd!"}");
+        System.out.println("The input number is " + (isEven(input) ? "even!" : "odd!"));
     }catch (Exception e){
         System.err.println(e.getMessage());
     }

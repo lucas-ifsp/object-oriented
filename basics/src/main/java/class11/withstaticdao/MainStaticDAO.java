@@ -9,7 +9,7 @@ void main() {updatePrice("SCL0001", 1_000.0);}
 
 void updatePrice(String sku, double incrementValue) {
     final Product product = SQLiteProductDAO.findOne(sku).map(this::fromDto)
-            .orElseThrow(() -> new NoSuchElementException(STR."Product not found: \{sku}"));
+            .orElseThrow(() -> new NoSuchElementException("Product not found: " + sku));
 
     product.setPrice(product.getPrice().add(BigDecimal.valueOf(incrementValue)));
     SQLiteProductDAO.update(toDto(product));

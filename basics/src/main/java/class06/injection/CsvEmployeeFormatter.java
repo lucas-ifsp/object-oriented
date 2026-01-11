@@ -6,7 +6,7 @@ public class CsvEmployeeFormatter implements EmployeeFormatter {
     public String format(Employee[] employees) {
         StringJoiner joiner = new StringJoiner("\n");
         for (Employee e : employees)
-            joiner.add(STR."\{e.getName()},\{e.getName()},\{e.getDateOfEmployment()},\{e.getYearsOfService()}");
+            joiner.add(String.join(", ", e.getName(), String.valueOf(e.getDateOfEmployment()), String.valueOf(e.getYearsOfService())));
         return joiner.toString();
     }
 }

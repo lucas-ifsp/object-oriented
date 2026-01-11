@@ -27,7 +27,7 @@ public class User {
 
     @Override
     public String toString() {
-        return STR."User{id=\{id}, name='\{email}'}";
+        return "User{id= " + id + ", name='" + email + "'}";
     }
 
     public UUID getId() {

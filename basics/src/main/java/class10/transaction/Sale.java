@@ -1,10 +1,7 @@
 package class10.transaction;
 
 import class10.basics.Product;
-
 import java.util.Objects;
-
-import static java.util.FormatProcessor.FMT;
 
 public class Sale {
     private long id;
@@ -27,8 +24,7 @@ public class Sale {
 
     @Override
     public String toString() {
-        //FMT is the formatter processor for String templates
-        return FMT."| Sale    | %7d\{id} | %-15s\{seller} | \{product.getName()} | %4d\{quantity} |";
+        return String.format("| Sale    | %7d | %-15s | %s | %4d |", id, seller, product.getName(), quantity);
     }
 
     @Override

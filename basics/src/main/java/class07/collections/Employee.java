@@ -27,8 +27,10 @@ public class Employee implements Comparable<Employee> {
 
     @Override
     public String toString() {
-        return STR."""
-        Employee{name='\{id}', name='\{name}', jobTitle='\{jobTitle}, salary=\{salary}, dateOfEmployment=\{dateOfEmployment}}""";}
+        return String.format("""
+               Employee{id='%s', name='%s', jobTitle='%s', salary=%.2f, dateOfEmployment=%s}""",
+                id , name, jobTitle, salary, dateOfEmployment);
+    }
 
     @Override
     public boolean equals(Object o) {

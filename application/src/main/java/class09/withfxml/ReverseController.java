@@ -13,7 +13,7 @@ public class ReverseController {
     public void reverse(ActionEvent e) throws Exception {
         final String inputText = txtInput.getText(); // to get the text
         final String reversedText = new StringBuilder(inputText).reverse().toString();
-        labelResult.setText(STR."Result: \{reversedText}"); // to set the reversed text
+        labelResult.setText("Result: " + reversedText); // to set the reversed text
         InfoSceneLoader sceneLoader = new InfoSceneLoader();
         sceneLoader.show(reversedText.length());
     }

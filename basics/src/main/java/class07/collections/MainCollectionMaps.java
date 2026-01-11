@@ -87,12 +87,12 @@ void main(){
     final Set<TechnicalSkill> linkedHashSet = new LinkedHashSet<>(technicalSkills);
 
     for (var skill : hashSet) {
-        System.out.println(STR."HashSet = \{skill}");
+        System.out.println("HashSet = " + skill);
     }
     for (var skill : treeSet) {
-        System.out.println(STR."TreeSet = \{skill}");
+        System.out.println("TreeSet = " + skill);
     }
     for (var skill : linkedHashSet) {
-        System.out.println(STR."LinkedHashSet = \{skill}");
+        System.out.println("LinkedHashSet = " + skill);
     }
 }

@@ -16,7 +16,7 @@ void main(){
     int totalDeliveryTime = 0;
     for (ShippingService service : shippingChain) {
         final int deliveryTime = service.calculateDeliveryTime();
-        System.out.println(STR."Delivery time of \{service.getClass().getSimpleName()} = \{deliveryTime} days.");
+        System.out.println("Delivery time of " + service.getClass().getSimpleName() + "= " + deliveryTime + " days.");
         totalDeliveryTime += deliveryTime;
     }
     System.out.println("totalDeliveryTime = " + totalDeliveryTime);

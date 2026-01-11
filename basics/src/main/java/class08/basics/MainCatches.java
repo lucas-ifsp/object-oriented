@@ -10,7 +10,7 @@ void main() {
         int index = scanner.nextInt();
         String [] strings = new String[size];
         strings[index] = "Ops!";
-        System.out.println(STR."strings[\{index}] = \{strings[index]}");
+        System.out.println("strings[" + index + "] = " + strings[index]);
     } catch (InputMismatchException e) {
         System.err.println(e);
     } catch (ArrayIndexOutOfBoundsException e){

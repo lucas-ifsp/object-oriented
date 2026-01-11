@@ -7,7 +7,7 @@ public interface ShippingService {
     int calculateDeliveryTime();
     String generateShippingLabel();
     static String generateShipmentLog(){
-        return STR."[\{createTimestamp()}] Product has been shipped.";
+        return "["+ createTimestamp() + "] Product has been shipped.";
     }
     private static String createTimestamp(){
         return LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd-MM-yyyy"));

@@ -22,7 +22,7 @@ public sealed class Employee permits Manager { // this class can only be inherit
         this.dateOfEmployment = dateOfEmployment;
     }
 
-    public double calculateBonus(){
+    public double calculateBonus() {
         double bonusPercentage = 0.05; // 5% bonus for all employees
         if (getYearsOfService() >= 5) {
             bonusPercentage += 0.1; // Additional 10% bonus for employees with 5 or more years of service
@@ -36,8 +36,10 @@ public sealed class Employee permits Manager { // this class can only be inherit
 
     @Override
     public String toString() {
-        return STR."""
-        Employee{name='\{id}', name='\{name}', jobTitle='\{jobTitle}, salary=\{salary}, dateOfEmployment=\{dateOfEmployment}}""";    }
+        return String.format("""
+                Employee{name='%s', name='%s', jobTitle='%s', salary=%.2f, dateOfEmployment=%s}""",
+                id, name, jobTitle, salary, dateOfEmployment);
+    }
 
     @Override
     public boolean equals(Object o) {

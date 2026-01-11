@@ -14,7 +14,7 @@ public final class Paycheck {
 
     @Override
     public String toString() {
-        return STR."Paycheck{payday=\{payday}, salary=\{salary}\{'}'}";
+        return "Paycheck{payday=" + payday + ", salary=" + salary + '}';
     }
 
     @Override

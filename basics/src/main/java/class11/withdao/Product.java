@@ -3,8 +3,6 @@ package class11.withdao;
 import java.math.BigDecimal;
 import java.util.Objects;
 
-import static java.util.FormatProcessor.FMT;
-
 public class Product {
     private final String sku;
     private String name;
@@ -28,8 +26,7 @@ public class Product {
 
     @Override
     public String toString() {
-        //FMT is the formatter processor for String templates (it works just like a String.formatter())
-        return FMT."| Product | \{sku} | %-15s\{name} | %8.2f\{price} | %4d\{quantity} | %10.2f\{getTotal()} |";
+        return String.format("| Product | %s | %-15s | %8.2f | %4d | %10.2f |", sku, name, price, quantity, getTotal());
     }
 
     @Override

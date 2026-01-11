@@ -36,7 +36,7 @@ public final class TechnicalSkill implements Comparable<TechnicalSkill> {
 
     @Override
     public String toString() {
-        return STR."TechnicalSkill{skillName='\{skillName}\{'\''}, proficiencyLevel=\{proficiencyLevel}\{'}'}";
+        return "TechnicalSkill{skillName='" + skillName + "', proficiencyLevel=" + proficiencyLevel + "}";
     }
 
     public String getSkillName() {
@@ -46,7 +46,5 @@ public final class TechnicalSkill implements Comparable<TechnicalSkill> {
     public int getProficiencyLevel() {
         return proficiencyLevel;
     }
-
-
 
 }

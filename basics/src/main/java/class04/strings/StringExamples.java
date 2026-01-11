@@ -68,18 +68,16 @@ void main() {
     System.out.println(String.join(" ", content)); // The first parameter is the delimiter. Java is cool!
 
     String language = "Java";
-    int version = 21;
+    int version = 25;
     String adjective = "awesome";
 
-    System.out.println(STR."\{language} version \{version} is \{adjective}. It accepts expressions: 1 + 1 = \{1 + 1}");
-
-    // It is easier to build JSON payloads
-    System.out.println(STR.
+    final String json = String.format(
             """
             {
-                "language":"\{language}",
-                "version":\{version},
-                "adjective":"\{adjective}"
+                "language":"%s",
+                "version":%d,
+                "adjective":"%s"
             }
-            """);
+            """, language, version, adjective);
+    System.out.println(json);
 }

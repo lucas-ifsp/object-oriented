@@ -25,8 +25,9 @@ void main() {
     workDay.checkIn(LocalDateTime.of(2024, 1, 21, 8, 2));
     workDay.checkOut(LocalDateTime.of(LocalDate.now(), LocalTime.of(16, 59, 0))); // hour, minute, second
     final long workedTimeInMinutes = workDay.getWorkedTimeInMinutes();
-    System.out.println(STR."Worked time in minutes = \{workedTimeInMinutes}"); // Worked time in minutes = 537
-    System.out.println(STR."Worked time in hours = \{Duration.ofMinutes(workedTimeInMinutes).toHours()}"); // Worked time in hours = 8
+
+    System.out.println("Worked time in minutes = " + workedTimeInMinutes); // Worked time in minutes = 537
+    System.out.println("Worked time in hours = " + Duration.ofMinutes(workedTimeInMinutes).toHours()); // Worked time in hours = 8
 
     final LocalDateTime todayAt6AM = LocalDate.now().atTime(6, 0); // 6:00
     System.out.println(todayAt6AM.isAfter(LocalDateTime.now())); // probably not ;)
