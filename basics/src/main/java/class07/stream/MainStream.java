@@ -16,8 +16,6 @@ void main() {
     System.out.println(imperativeFilterComputerScientists(employees));
     System.out.println(declarativeFilterComputerScientists(employees));
 
-
-
     final String[] skillNames = {"Java", "Object-orientation", "functional programming"};
     Stream.of(skillNames)
             .map(String::toUpperCase) // particular
